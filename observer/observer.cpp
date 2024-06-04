@@ -18,7 +18,7 @@ public:
 class RideRequest : public IObservable {
 private:
 	vector<IObserver*> observers;
-	string status = "";
+	string status = "Created";
 
 	void Notify() {
 		for (auto observer : observers) {
