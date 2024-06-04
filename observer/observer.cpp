@@ -45,14 +45,8 @@ public:
 };
 
 class Monitoring : public IObserver {
-private:
-	IObservable* request;
 public:
-	Monitoring(IObservable* obj) {
-		request = obj;
-		obj->Attach(this);
-	}
-	void update(string status) {
+	void Update(string status) override {
 		cout << "Status of request: " << status << "\n";
 	}
 };
